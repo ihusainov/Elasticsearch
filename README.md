@@ -22,7 +22,7 @@ Create user - best practice use Kibana Role
 
 ```bash
 # If error
-"status"=>400, "error"=>{"type"=>"validation_exception", "reason"=>"Validation Failed: 1: this action would add [2] shards, but this cluster currently has [1000]/[1000] maximum normal shards open
+"status"=>400, "error"=>{"type"=>"validation_exception", "reason"=>"Validation Failed: 1: this action would add [2] shards, but this cluster currently has [1000]/[1000] maximum normal shards open"}
 
 # Need run command
 curl --cacert /etc/elasticsearch/certs/ca.crt -XPUT https://username:password@node1.local:9200/_cluster/settings -H 'Content-type: application/json' --data-binary $'{"transient":{"cluster.max_shards_per_node":5100}}'
