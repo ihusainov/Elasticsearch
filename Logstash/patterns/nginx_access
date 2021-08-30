@@ -1,0 +1,1 @@
+NGINX_ACCESS %{IPORHOST:remote_addr} - %{USERNAME:remote_user} \[%{HTTPDATE:time_local}\] \"%{DATA:site_name}\" \"%{DATA:method} %{DATA:url} HTTP/%{NUMBER:httpversion}\" %{NUMBER:response} (?:%{NUMBER:bytes_sent}|-) %{NUMBER:bytes_received} (?:"(?:%{URI:referrer}|-)"|%{QS:referrer}) %{QS:agent} %{NUMBER:request_time} (?:%{NUMBER:upstream_time:float}|-)
